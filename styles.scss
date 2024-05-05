@@ -21,6 +21,8 @@ body {
   overflow: hidden;
 }
 
+
+// BACKGROUND IMAGES
 .bg-pattern-top,
 .bg-pattern-bottom {
   width: 100%;
@@ -31,7 +33,7 @@ body {
 }
 
 .bg-pattern-top {
-  background-image: url(./images/bg-pattern-top.svg);
+  background-image: url(../images/bg-pattern-top.svg);
   background-position: bottom 34vh right 52vw;
   bottom: 0;
   animation: slide-top 10s ease infinite;
@@ -44,7 +46,7 @@ body {
 }
 
 .bg-pattern-bottom {
-  background-image: url(./images/bg-pattern-bottom.svg);
+  background-image: url(../images/bg-pattern-bottom.svg);
   background-position: top 52vh left 48vw;
   top: 0;
   animation: slide-bottom 10s ease infinite;
@@ -56,9 +58,9 @@ body {
   }
 }
 
+// PROFILE
 .profile {
   width: min(86.6%, 350px);
-  height: 374px;
   border-radius: 1rem;
   background: $white;
   box-shadow: 0 50px 80px -10px hsl(229, 23%, 23%, 0.35);
@@ -91,18 +93,23 @@ body {
       padding-bottom: 1.475rem;
       text-align: center;
 
-      .basic-info__name {
-        color: $boldColor;
-      }
+      .basic-info--flex {
+        display: flex;
+        justify-content: center;
+        gap: 0.75rem;
 
-      .basic-info__name,
-      .basic-info__age {
-        font-size: 1.105rem;
-      }
-
-      .basic-info__age {
-        margin-left: 0.45rem;
-        color: $textColor;
+          .basic-info__name {
+            color: $boldColor;
+          }
+    
+          .basic-info__name,
+          .basic-info__age {
+            font-size: 1.105rem;
+          }
+    
+          .basic-info__age {
+            color: $textColor;
+          }
       }
 
       .basic-info__location {
@@ -115,7 +122,7 @@ body {
   }
 
   .stats {
-    margin-top: 1.575rem;
+    padding: 1.575rem 0;
     display: flex;
     justify-content: center;
     gap: 3.646rem;

@@ -50,7 +50,6 @@ body {
 
 .profile {
   width: min(86.6%, 350px);
-  height: 374px;
   border-radius: 1rem;
   background: hsl(0, 0%, 100%);
   box-shadow: 0 50px 80px -10px hsla(229, 23%, 23%, 0.35);
@@ -81,15 +80,19 @@ body {
   padding-bottom: 1.475rem;
   text-align: center;
 }
-.profile .profile__info .basic-info .basic-info__name {
+.profile .profile__info .basic-info .basic-info--flex {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.profile .profile__info .basic-info .basic-info--flex .basic-info__name {
   color: hsl(229, 23%, 23%);
 }
-.profile .profile__info .basic-info .basic-info__name,
-.profile .profile__info .basic-info .basic-info__age {
+.profile .profile__info .basic-info .basic-info--flex .basic-info__name,
+.profile .profile__info .basic-info .basic-info--flex .basic-info__age {
   font-size: 1.105rem;
 }
-.profile .profile__info .basic-info .basic-info__age {
-  margin-left: 0.45rem;
+.profile .profile__info .basic-info .basic-info--flex .basic-info__age {
   color: hsl(227, 10%, 46%);
 }
 .profile .profile__info .basic-info .basic-info__location {
@@ -99,7 +102,7 @@ body {
   color: hsl(227, 10%, 46%);
 }
 .profile .stats {
-  margin-top: 1.575rem;
+  padding: 1.575rem 0;
   display: flex;
   justify-content: center;
   gap: 3.646rem;
